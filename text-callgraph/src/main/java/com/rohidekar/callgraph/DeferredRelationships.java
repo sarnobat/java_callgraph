@@ -14,13 +14,9 @@ class DeferredRelationships {
   public static void handleDeferredRelationships(Relationships relationships) {
     for (DeferredParentContainment aDeferredParentContainment :
         relationships.getDeferredParentContainments()) {
-      try {
       JavaClass parentClass =
           relationships.getClassDef(aDeferredParentContainment.getParentClassName());
       handleDeferredParentContainment(relationships, aDeferredParentContainment, parentClass);
-      } catch (Exception e) {
-        System.out.println("DeferredRelationships.handleDeferredRelationships() - SRIDHAR: " + e.getMessage());
-      }
     }
     for (DeferredChildContainment containment : relationships.getDeferredChildContainment()) {
       MyClassVisitor.addContainmentRelationship(
