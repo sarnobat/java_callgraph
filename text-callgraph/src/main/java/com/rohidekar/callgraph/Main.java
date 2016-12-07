@@ -63,8 +63,8 @@ public class Main {
     String resource;
     if (args == null || args.length < 1) {
       //resource = "/home/ssarnobat/workspaces/2012-06-12/06-12/";
-      //resource = "/Users/ssarnobat/work/src/saas-api/utils/target/classes";
-      resource = "/Users/ssarnobat/github/nanohttpd/target";
+      resource = "/Users/ssarnobat/work/src/saas-api/";
+      //resource = "/Users/ssarnobat/github/nanohttpd/target";
       // TODO: use the current working directory as the class folder, not
       // an arbitrary jar
     } else {
