@@ -1,0 +1,1 @@
+java -jar /Users/sarnobat/trash/java-callgraph/target/javacg-0.1-SNAPSHOT-static.jar /Users/sarnobat/Windows/usb/Professional/GWT/workspace/trash/workspace2/trash/sarnobat5/war/WEB-INF/lib/jdo2-api-2.3-eb.jar | grep -P '^C' | perl -pe 's{^C:([^ ]+) ([^ \n]+)$}{"$1" -> "$2"}g'   | grep -v 'java\.' > temp.txt    
