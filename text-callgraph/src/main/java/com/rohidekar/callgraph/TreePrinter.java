@@ -81,7 +81,7 @@ public class TreePrinter {
         printTreeTest(rootNode, 0, new HashSet<GraphNode>());
         System.out.println("");
       }
-      System.out.println("");
+//      System.out.println("");
     }
   }
 
