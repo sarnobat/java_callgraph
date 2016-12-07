@@ -6,8 +6,6 @@ import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 
-import com.sun.istack.internal.Nullable;
-
 import org.apache.bcel.Repository;
 import org.apache.bcel.classfile.ClassFormatException;
 import org.apache.bcel.classfile.JavaClass;
@@ -66,7 +64,6 @@ public class Relationships {
     DeferredRelationships.handleDeferredRelationships(this);
   }
 
-  @Nullable
   private static void visitJavaClass(JavaClass javaClass, Relationships relationships) {
     try {
       new MyClassVisitor(javaClass, relationships).visitJavaClass(javaClass);
