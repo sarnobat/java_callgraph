@@ -192,11 +192,15 @@ public class Relationships {
     try {
       jc = Repository.lookupClass(aClassFullName);
     } catch (ClassNotFoundException e) {
+      System.err.println("Relationships.getClassDef() - SRIDHAR: " + aClassFullName);
       if (this.classNameToJavaClassMap.get(aClassFullName) != null) {
         if (log.isEnabledFor(Level.WARN)) {
           log.warn("We do need our own homemade repository. I don't know why");
         }
       }
+    } catch (Exception e) {
+      //e.printStackTrace();
+      System.out.println("Relationships.getClassDef() - SRIDHAR: error");
     }
     if (jc == null) {
       jc = this.classNameToJavaClassMap.get(aClassFullName);
