@@ -62,7 +62,8 @@ public class Main {
     Logger.getRootLogger().addAppender(consoleAppender);
     String resource;
     if (args == null || args.length < 1) {
-      resource = "/home/ssarnobat/workspaces/2012-06-12/06-12/";
+      //resource = "/home/ssarnobat/workspaces/2012-06-12/06-12/";
+      resource = "/Users/ssarnobat/work/src/saas-api/utils/target/classes";
       // TODO: use the current working directory as the class folder, not
       // an arbitrary jar
     } else {
